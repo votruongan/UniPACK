@@ -46,7 +46,8 @@
   font-weight: 900;
   src: 
   local('Work Sans Black'), local('WorkSans-Black'),  
-   url('../../fonts/work-sans-black.woff2') format('woff2');
+   url ('../../fonts/work-sans-black.woff2') format('woff2'),
+   url('../../fonts/WorkSans-Black.ttf') format('truetype');
 }
 html {
   font-family: sans-serif;
@@ -9886,10 +9887,19 @@ div.img{
   max-width: 30vw;
   height: auto;
 }
-
-@media(min-width: 500px){
+@media(max-width: 500px){
 div.img{
   max-width: 100vw;
   height: auto;
+}
+}
+
+.try-center{
+  margin-left:1rem;
+}
+
+@media(max-width: 800px){
+.try-center{
+  margin-left:1.5rem;
 }
 }
