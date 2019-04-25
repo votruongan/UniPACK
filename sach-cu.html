@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
-
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     
@@ -25,7 +22,7 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark  position-sticky ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg  position-sticky ftco-navbar-light" id="ftco-navbar">
       <div class="container d-flex align-items-center">
         <a class="navbar-brand unipack-font" href="index.html">UniPACK</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,18 +37,105 @@
               <li class="nav-item"><a href="danh-gia.html" class="nav-link">Đánh giá môn học</a></li>
               <li class="nav-item"><a href="gioi-thieu.html" class="nav-link">Giới thiệu</a></li>
               <li class="nav-item"><a href="lien-he.html" class="nav-link">Liên hệ</a></li>
+              <li class="nav-item bg-primary">
+                <div class="container" style="padding-left: 3rem;padding-right: 3rem; display: block;" id="userAvatar">
+                  <div class="row">
+                <div class="col-xm-4 bg-primary">
+                <img src="images/user.png" class =" sm-avatar"/></div>
+                <div class="col-xm-8" style="padding-top: 1rem; padding-left: .5rem;">
+                <a href="lien-he.html" class="color-electric">gongcha</a>
+                </div>
+
+              </li>
+
+              </div>
+              </div>
+                </div>
+                
+          </li>
             </ul>
+
           </div>
       </div>
     </nav>
     <!-- END nav -->
     
-    <section class="hero-wrap bg-img2" style="background-image: url('images/bg-sach-cu.jpg');">
+
+
+    <section class="hero-wrap bg-img2" style="background-image: url('images/bg-sachcu.jpg');">
       <div class="overlay"></div>
       <div class="container">
+
+
+          <!-- BOOK UP PANEL -->
+          <div class="py-5 px-md-5 bg-prussian modal" id="bookUpForm">
+            <div class="heading-section heading-section-white ftco-animate mb-5">
+              <div class="horizonal-sep"></div>
+              <h2 class="mb-4 col-md-10">Đăng bán sách, tài liệu</h2>
+              <p>Hãy điền những thông tin cơ bản sau và <a class="unipack-font">UniPACK</a> sẽ lo phần còn lại</p>
+            </div>
+            <form action="#" class="register-form ftco-animate">
+              <div class="d-md-flex">
+                <div class="form-group">
+                  <div class="form-field">
+                    <div class="select-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="" class="form-control">
+                        <option value="">Chọn loại tài liệu</option>
+                        <option value="">Sách</option>
+                        <option value="">Giáo trình</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-md-flex">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Tên tài liệu">
+                </div>
+              </div>
+              <div class="d-md-flex">
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Mô tả tình trạng">
+              </div>
+              </div>
+
+              <div class="d-md-flex">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="GIÁ BÁN LẠI">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Giá mua gốc">
+              </div>
+            </div>
+            <div class="horizonal-sep"></div>
+            <div class="horizonal-sep"></div>
+              <div class="d-md-flex">
+              <div class="form-group">
+              <span class="color-electric">Ảnh chụp tình trạng tài liệu:</span>
+            <input type="file" name="myFile" attr="multiple" class="col-md-8 color-electric">
+            </div>
+            </div>
+            <div class="horizonal-sep"></div>
+              <div class="d-md-flex">
+                  <div class="form-group  col-md-8">
+                    <input type="add" value="Đăng bán sách, tài liệu" class="btn btn-secondary py-3 px-4" id="submitBookUp">
+                  </div>
+              <div class="form-group col-md-8">
+                    <input type="cancel" onclick="closeBookUpForm()" value="Hủy" class="bg-primary col-md-4 btn btn-secondary py-3 px-4" id="closeButton">
+                </div>
+              </div>
+            </form>
+          </div>
+         </div>
+          <!-- BOOK UP PANEL -->
+
+
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center with-img2">
             <h1 class="mb-2 bread color-electric font-weight-bold">Chợ sách, tài liệu cũ</h1>
+            <p><a id= "showButton" href="javascript:showBookUpForm();" class="btn btn-shappire px-4 py-3 mt-3">Đăng bán sách, tài liệu</a></p>
           </div>
         </div>
       </div>
@@ -87,12 +171,26 @@
 
         <!-- Items display -->
           <div class="col-md-8 list-item">
+            <div class="row list-item" style="display: block;" id ="bookUp">
+              <div class="img" style="background-image: url(images/book-up.jpg); "></div>
+              <div class="text bg-light p-4">
+                <h3><a href="book-single.html">Nhà giả kim</a></h3>
+                <p class="subheading"><span>Người đăng: </span>gongcha</p>
+                <p class="subheading"><span>Tình trạng sách: </span>100%</p>
+                <p class="subheading color-navy font-weight-bold"><span>Giá bán lại: </span>45.000 đ</p>
+                  <span>Giá gốc: </span>55.000 đ</p>
+                <p>Con người bạn sẽ trở nên sâu sắc hơn qua mỗi cuộc hành trình.</p>
+              </div>
+            </div>
             <div class="row list-item">
               <div class="img" style="background-image: url(images/book-1.jpg);"></div>
               <div class="text bg-light p-4">
                 <h3><a href="#">Giáo trình tư tưởng Hồ Chí Minh</a></h3>
-                <p class="subheading color-navy font-weight-bold"><span>Giá bán: </span>20.000 đ</p>
                 <p class="subheading"><span>Người đăng: </span>hoangtubanggia</p>
+                <p class="subheading"><span>Tình trạng sách: </span>100%</p>
+                <p class="subheading color-navy font-weight-bold">
+                  <span>Giá bán lại: </span>20.000 đ</p>
+                  <span>Giá gốc: </span>30.000 đ</p>
                 <p>Giáo trình còn mới. Nhờ cuốn này mà mình được 10 điểm môn tư tưởng. Yêu lắm cơ.</p>
               </div>
             </div>
@@ -100,8 +198,10 @@
               <div class="img" style="background-image: url(images/book.jpg);"></div>
               <div class="text bg-light p-4">
                 <h3><a href="book-single.html">Giáo trình Những nguyên lí cơ bản của chủ nghĩa Mác-Lênin</a></h3>
-                <p class="subheading color-navy font-weight-bold"><span>Giá bán: </span>30.000 đ</p>
                 <p class="subheading"><span>Người đăng: </span>cloudyvirus</p>
+                <p class="subheading"><span>Tình trạng sách: </span>90%</p>
+                <p class="subheading color-navy font-weight-bold"><span>Giá bán lại: </span>25.000 đ</p>
+                  <span>Giá gốc: </span>40.000 đ</p>
                 <p>Cuốn sách khai sáng con người trong bạn. Thay đổi những tư duy đã cũ, những tưởng là chân lí trong con người.</p>
               </div>
             </div>
@@ -109,8 +209,10 @@
               <div class="img" style="background-image: url(images/book-3.jpg);"></div>
               <div class="text bg-light p-4">
                 <h3><a href="#">Sách Hạch toán kế toán trong Doanh nghiệp</a></h3>
-                <p class="subheading color-navy font-weight-bold"><span>Giá bán: </span>50.000 đ</p>
                 <p class="subheading"><span>Người đăng: </span>congchuatuyet</p>
+                <p class="subheading"><span>Tình trạng sách: </span>90%</p>
+                <p class="subheading color-navy font-weight-bold"><span>Giá bán lại: </span>25.000 đ</p>
+                  <span>Giá gốc: </span>40.000 đ</p>
                 <p>Sách viết rất đầy đủ và chi tiết. Tiếc là mình không học môn này.</p>
               </div>
             </div>
@@ -118,17 +220,22 @@
               <div class="img" style="background-image: url(images/book-4.jpg);"></div>
               <div class="text bg-light p-4">
                 <h3><a href="#">Sách kỹ năng thuyết trình</a></h3>
-                <p class="subheading color-navy font-weight-bold"><span>Giá bán: </span>20.000 đ</p>
-                <p class="subheading"><span>Người đăng: </span> littleTurtle</p>
+                <p class="subheading color-navy font-weight-bold">
+                <p class="subheading"><span>Người đăng: </span>bongmayngangtroi</p>
+                <p class="subheading"><span>Tình trạng sách: </span>90%</p>
+                <p class="subheading color-navy font-weight-bold"><span>Giá bán lại: </span>25.000 đ</p>
+                  <span>Giá gốc: </span>40.000 đ</p>
                 <p>Viết rất chi tiết và rất sát với thực tế. Mình học được rất nhiều điều từ sác và đã có gấu ngay sau khi mua cuốn này.</p>
               </div>
             </div>
             <div class="row list-item">
-              <div class="img" style="background-image: url(images/book-5.jpg);"></div>
+              <div class="img" style="background-image: url(images/book.jpg);"></div>
               <div class="text bg-light p-4">
-                <h3><a href="#">Giáo trình Những nguyên lí cơ bản của chủ nghĩa Mác-Lênin</a></h3>
-                <p class="subheading color-navy font-weight-bold"><span>Giá bán: </span>30.000 đ</p>
+                <h3><a href="book-single.html">Giáo trình Những nguyên lí cơ bản của chủ nghĩa Mác-Lênin</a></h3>
                 <p class="subheading"><span>Người đăng: </span>cotamthoinay</p>
+                <p class="subheading"><span>Tình trạng sách: </span>90%</p>
+                <p class="subheading color-navy font-weight-bold"><span>Giá bán lại: </span>25.000 đ</p>
+                  <span>Giá gốc: </span>40.000 đ</p>
                 <p>Không có từ ngữ nào diễn tả được sự tuyệt vời, uyên thâm của cuốn giáo trình này.</p>
               </div>
             </div>
@@ -136,8 +243,10 @@
               <div class="img" style="background-image: url(images/book-2.jpg);"></div>
               <div class="text bg-light p-4">
                 <h3><a href="#">Giáo trình Tâm lí học đại cương</a></h3>
-                <p class="subheading color-navy font-weight-bold"><span>Giá bán: </span>35.000 đ</p>
-                <p class="subheading"><span>Người đăng: </span>nhokvippro</p>
+                <p class="subheading"><span>Người đăng: </span>cotamthoinay</p>
+                <p class="subheading"><span>Tình trạng sách: </span>90%</p>
+                <p class="subheading color-navy font-weight-bold"><span>Giá bán lại: </span>25.000 đ</p>
+                  <span>Giá gốc: </span>40.000 đ</p>
                 <p>Giáo trình Tâm lí học đại cương. Rất hay và tinh tế.</p>
               </div>
             </div>
@@ -241,9 +350,8 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/UIControl_Book.js"></script>
     
   </body>
 </html>

@@ -36,16 +36,23 @@
 		        	<li class="nav-item"><a href="danh-gia.html" class="nav-link">Đánh giá môn học</a></li>
 		        	<li class="nav-item"><a href="gioi-thieu.html" class="nav-link">Giới thiệu</a></li>
 		          <li class="nav-item"><a href="lien-he.html" class="nav-link">Liên hệ</a></li>
-		          <li class="nav-item">
-		          	<div class="container" style="padding-left: 5rem;">
+		          <li class="nav-item bg-primary">
+		          	<a href="javascript:showLogInForm();" class="nav-link "  id ="loginTxt">Đăng nhập</a>
+
+		          	<div class="container" style="padding-left: 3rem;padding-right: 3rem; display: block;" id="userAvatar">
 		          		<div class="row">
-		          	<div class="col-xm-4">
+		          	<div class="col-xm-4 bg-primary">
 		          	<img src="images/user.png" class =" sm-avatar"/></div>
 		          	<div class="col-xm-8" style="padding-top: 1rem; padding-left: .5rem;">
-		          	<a href="lien-he.html">gongcha</a>
+		          	<a href="lien-he.html" class="color-electric">gongcha</a>
 		          	</div>
+
+		          </li>
+
 		          </div>
 		          </div>
+		          	</div>
+		          	
 		      </li>
 	        	</ul>
 
@@ -58,7 +65,8 @@
       <div class="hero-wrap bg-img" style="
   background-image:url('images/background-0.jpg');">
         <div class="container">
-        	<div class="py-5 px-md-5 bg-primary modal" id="regForm" id="regFormBody">
+        	<!-- SIGN UP PANEL -->
+        	<div class="py-5 px-md-5 bg-prussian modal" id="regForm" id="regFormBody">
 	          <div class="heading-section heading-section-white ftco-animate mb-5">
 	          	<div class="horizonal-sep"></div>
 	            <h2 class="mb-4 col-md-10">Đăng kí thành viên</h2>
@@ -104,14 +112,47 @@
 	    			</div>
 	    				<div class="d-md-flex">
 			            <div class="form-group  col-md-8">
-			              <input type="submit" onclick="reloadPage()" value="Đăng kí thành viên" class="btn col-md-8 btn-secondary py-3 px-4">
+			              <input type="submit" value="Đăng kí thành viên" class="btn btn-secondary py-3 px-4" id="submitRegInfo">
 			            </div>
-    					<div class="form-group col-md-7">
-			              <input type="cancel" onclick="toggleRegisterForm()" value="Hủy" class="col-md-4 btn btn-secondary py-3 px-4" id="closeButton">
+    					<div class="form-group col-md-8">
+			              <input type="cancel" onclick="toggleRegisterForm()" value="Hủy" class="bg-primary col-md-4 btn btn-secondary py-3 px-4" id="closeButton">
 			          </div>
 	    				</div>
 	    			</form>
     			</div>
+    			<!-- SIGN UP PANEL -->
+
+    			<!-- LOGIN PANEL -->
+        	<div class="py-5 px-md-5 bg-prussian modal" id="loginForm" id="loginForm">
+	          <div class="heading-section heading-section-white ftco-animate mb-5">
+	          	<div class="horizonal-sep"></div>
+	            <h2 class="mb-4 col-md-10">Đăng nhập</h2>
+	            <p>Hãy xác nhận danh tính của bạn để tham gia vào cộng đồng <a class="unipack-font">UniPACK</a></p>
+	          </div>
+	          <form action="#" class="register-form ftco-animate">
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					<input type="text" class="form-control" placeholder="Tên đăng nhập">
+		    				</div>
+	    				</div>
+	    				<div class="d-md-flex">
+	    				<div class="form-group">
+	    					<input type="password" class="form-control" placeholder="Mật khẩu">
+	    				</div>
+	    				</div>
+	    				<div class="horizonal-sep"></div>
+	    				<div class="horizonal-sep"></div>
+	    				<div class="d-md-flex">
+			            <div class="form-group  col-md-8">
+			              <input type="login" value="Đăng nhập" class="btn btn-secondary py-3 px-4" id="logInButton">
+			            </div>
+    					<div class="form-group col-md-8">
+			              <input type="cancel" onclick="closeLogInForm()" value="Hủy" class="bg-primary col-md-4 btn btn-secondary py-3 px-4" id="closeButton">
+			          </div>
+	    				</div>
+	    			</form>
+    			</div>
+    			<!-- LOGIN PANEL -->
 
           <div class="row no-gutters align-items-center justify-content-center" data-scrollax-parent="true" id="frontContent">
           <div class="col-md-8 text-center ftco-animate  with-img">
@@ -122,6 +163,8 @@
         </div>
         </div>
       </div>
+
+
 
     <section class="ftco-services ftco-no-pb">
 		<div class="container-wrap">
