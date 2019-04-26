@@ -2134,7 +2134,7 @@ fieldset:disabled a.btn {
   background-color: #1034A6;
   border-color: #0080FF; }
   .btn-space:hover {
-    color: #000;
+    color: #fff;
     background-color: #0024A6;
     border-color: #0080FF; }
   .btn-space:focus, .btn-secondary.focus {
@@ -8238,7 +8238,7 @@ h1, h2, h3, h4, h5,
     top:0;
     left:0;
     right:0;
-    bottom:20em;
+    bottom:15em;
     content: '';
     opacity: .3;
     background: #f1453d;}
@@ -9129,7 +9129,6 @@ textarea.form-control {
   font-size: 16px;
   display: block;
   margin-bottom: 0;
-  text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(0, 0, 0, 0.9);
   position: relative; }
@@ -9514,10 +9513,16 @@ textarea.form-control {
         border-radius: 50%; }
     .comment-list li .comment-body {
       float: right;
-      width: calc(100% - 80px); }
+      width: calc(100% - 80px); 
+      color: #fff;}
+    .comment-list .review li .comment-body-2 {
+      float: right;
+      width: calc(100% - 80px); 
+      color: #000;}
       .comment-list li .comment-body h3 {
         font-size: 18px;
-        font-weight: 500; }
+        font-weight: 500;
+        margin-left: -0.75em; }
       .comment-list li .comment-body .meta {
         text-transform: uppercase;
         font-size: 13px;
@@ -9886,6 +9891,7 @@ option{
 div.img{
   max-width: 30vw;
   height: auto;
+  background-size: cover;
 }
 @media(max-width: 500px){
 div.img{
@@ -9902,4 +9908,8 @@ div.img{
 .try-center{
   margin-left:1.5rem;
 }
+}
+
+.unchecked .subheading span{
+  color: gray;
 }

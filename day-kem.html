@@ -116,14 +116,14 @@
             <div class="horizonal-sep"></div>
               <div class="d-md-flex">
               <div class="form-group">
-              <span class="color-electric">Ảnh chụp đại diện bạn:</span>
+              <span class="color-electric">Ảnh chụp đại diện của bạn:</span>
             <input type="file" name="myFile" attr="multiple" class="col-md-8 color-electric">
             </div>
             </div>
             <div class="horizonal-sep"></div>
               <div class="d-md-flex">
                   <div class="form-group  col-md-8">
-                    <input type="add" value="Đóng góp nhận xét" class="btn btn-secondary py-3 px-4" id="submitBookUp">
+                    <input type="add" value="Đăng kí làm người đồng hành" class="btn btn-secondary py-3 px-4" id="submitBookUp">
                   </div>
               <div class="form-group col-md-8">
                     <input type="cancel" onclick="closeBookUpForm()" value="Hủy" class="bg-primary col-md-4 btn btn-secondary py-3 px-4" id="closeButton">
@@ -143,11 +143,14 @@
         </div>
       </div>
     </section>
-
     <section class="ftco-section bg-light">
       <div class="container align-items-center justify-content-center">
+        <div class="horizonal-sep"></div>
+        <div class="horizonal-sep"></div>
+        <div class="horizonal-sep"></div>
       <div class="row">
         <!-- Search box -->
+
           <div class="ftco-animate try-center" style="">
               <form class="navbar-form" role="search">
                 <div class="input-group add-on">
@@ -155,17 +158,18 @@
                   <div class = "row " >
                   <input class="form-control font-italic" placeholder="Nhập các môn học bạn cần cải thiện" name="search" id="search-field" style="width:80vw;" type="text">
                   </div>
-                  <div class = "row horizonal-sep align-items-center justify-content-center">
-                  <button class="btn btn-primary px-4 py-3" style="" type="submit"><i class="oi oi-magnifying-glass"></i>Tìm người đồng hành</button>
-                  </div>
+                  
                 </div>
                 </div>
-              </form>
+              </form><div class = "row horizonal-sep align-items-center justify-content-center">
+              <button class="btn btn-primary px-4 py-3" id="findBtn"><i class="oi oi-magnifying-glass"></i>Tìm người đồng hành</button>
+              </div>
           </div>
         </div>
         <!-- Search box -->
         
         <!-- Seperator -->
+        <div class="horizonal-sep"></div>
         <div class="horizonal-sep"></div>
         <div class="horizonal-sep"></div>
         <div class="horizonal-sep"></div>
@@ -179,9 +183,8 @@
     </section>
     <section class="ftco-section">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 course d-lg-flex ftco-animate">
-
+        <div class="row" id="showMe">
+          <div class="col-md-6 course d-lg-flex ftco-animate" >
             <div class="text bg-light p-4">
               <h3><a href="#">Võ Văn Vinh</a></h3>
               <p class="subheading"><span>Điểm đánh giá:   </span>4/5 </p>
@@ -247,6 +250,10 @@
       </div>
     </section>
 
+        <div class="horizonal-sep"></div>
+        <div class="horizonal-sep"></div>
+        <div class="horizonal-sep"></div>
+        <div class="horizonal-sep"></div>
 		
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">

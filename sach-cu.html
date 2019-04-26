@@ -70,6 +70,7 @@
 
           <!-- BOOK UP PANEL -->
           <div class="py-5 px-md-5 bg-prussian modal" id="bookUpForm">
+            <div id="formHolder">
             <div class="heading-section heading-section-white ftco-animate mb-5">
               <div class="horizonal-sep"></div>
               <h2 class="mb-4 col-md-10">Đăng bán sách, tài liệu</h2>
@@ -98,7 +99,7 @@
               </div>
               <div class="d-md-flex">
               <div class="form-group">
-                <input type="password" class="form-control" placeholder="Mô tả tình trạng">
+                <input type="text" class="form-control" placeholder="Mô tả tình trạng">
               </div>
               </div>
 
@@ -121,7 +122,7 @@
             <div class="horizonal-sep"></div>
               <div class="d-md-flex">
                   <div class="form-group  col-md-8">
-                    <input type="add" value="Đăng bán sách, tài liệu" class="btn btn-secondary py-3 px-4" id="submitBookUp">
+                    <input type="add" value="Đăng bán sách, tài liệu" class="btn btn-secondary py-3 px-4" id="submitBookUp2">
                   </div>
               <div class="form-group col-md-8">
                     <input type="cancel" onclick="closeBookUpForm()" value="Hủy" class="bg-primary col-md-4 btn btn-secondary py-3 px-4" id="closeButton">
@@ -129,6 +130,15 @@
               </div>
             </form>
           </div>
+        <div id="notiHolder" class="mt-5 ml-5">
+          <img src="images/cat.png"  style="top:10vw; margin-left:33vw; width:20vw; height: auto;">
+          <p style="color:white;font-size:2em;margin-left:16vw;"><span class="unipack-font">UniPACK</span> đã nhận được yêu cầu từ bạn và đang xử lý.</p>
+              <div class="d-md-flex">
+          <div class="form-group col-md-12 ml-5">
+                <input type="cancel" value="Đã hiểu"  style="margin-left:23vw;"  class="bg-primary col-md-4 btn btn-secondary py-3 px-4" id="okButton">
+            </div>
+          </div>
+        </div>
          </div>
           <!-- BOOK UP PANEL -->
 
@@ -172,7 +182,7 @@
 
         <!-- Items display -->
           <div class="col-md-8 list-item">
-            <div class="row list-item" style="display: block;" id ="bookUp">
+            <div class="row list-item" id ="bookUp">
               <div class="img" style="background-image: url(images/book-up.jpg); "></div>
               <div class="text bg-light p-4">
                 <h3><a href="book-single.html">Nhà giả kim</a></h3>
